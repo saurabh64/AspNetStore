@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace AspNetStore.Data
         {
 
         }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
