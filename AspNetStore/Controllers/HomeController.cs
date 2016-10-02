@@ -13,7 +13,7 @@ namespace AspNetStore.Controllers
         // GET: Home
         public async Task<ActionResult> Index()
         {
-            await DbPopulate.AddDataAsync();
+           // await DbPopulate.AddDataAsync();
             return View();
         }
     }

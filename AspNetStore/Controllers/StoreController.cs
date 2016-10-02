@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetStore.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,10 +10,20 @@ namespace AspNetStore.Controllers
 {
     public class StoreController : Controller
     {
+        public readonly StoreService _store;
+        public StoreController():this(new StoreService())
+        {
+                
+        }
+        public StoreController(StoreService service)
+        {
+            _store = service;
+        }
         // GET: Store
         public  async Task<ActionResult> Index() //for all products
         {
-            return View();
+            var categories =  await _store.GetCategories();
+            return View(categories);
         }
 
         public async Task<ActionResult> Browse(string id)  //for category

@@ -137,6 +137,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Services\StoreService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
